@@ -1,0 +1,10 @@
+C:\Users\JIKLY\source\repos\SeaWars\SeaWars\bin\Debug\SeaWars.exe.config
+C:\Users\JIKLY\source\repos\SeaWars\SeaWars\bin\Debug\SeaWars.exe
+C:\Users\JIKLY\source\repos\SeaWars\SeaWars\bin\Debug\SeaWars.pdb
+C:\Users\JIKLY\source\repos\SeaWars\SeaWars\obj\Debug\SeaWars.csproj.AssemblyReference.cache
+C:\Users\JIKLY\source\repos\SeaWars\SeaWars\obj\Debug\SeaWars.Form1.resources
+C:\Users\JIKLY\source\repos\SeaWars\SeaWars\obj\Debug\SeaWars.Properties.Resources.resources
+C:\Users\JIKLY\source\repos\SeaWars\SeaWars\obj\Debug\SeaWars.csproj.GenerateResource.cache
+C:\Users\JIKLY\source\repos\SeaWars\SeaWars\obj\Debug\SeaWars.csproj.CoreCompileInputs.cache
+C:\Users\JIKLY\source\repos\SeaWars\SeaWars\obj\Debug\SeaWars.exe
+C:\Users\JIKLY\source\repos\SeaWars\SeaWars\obj\Debug\SeaWars.pdb
