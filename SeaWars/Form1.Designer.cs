@@ -123,7 +123,6 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Однопалубные (1)";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // pictureBox3
             // 
@@ -132,6 +131,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(113, 58);
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox3_Paint);
             // 
             // groupBox2
             // 
@@ -150,6 +150,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(113, 58);
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox4_Paint);
             // 
             // groupBox3
             // 
@@ -168,6 +169,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(113, 58);
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox5_Paint);
             // 
             // groupBox4
             // 
@@ -178,7 +180,6 @@
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Трёхпалубные (4)";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // pictureBox6
             // 
@@ -187,6 +188,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(113, 58);
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox6_Paint);
             // 
             // Form1
             // 

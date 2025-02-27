@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
@@ -44,7 +38,7 @@ namespace SeaWars
                     {
                         Rectangle rec = new Rectangle( i * current_play.cellW, j * current_play.cellH, current_play.cellW, current_play.cellH );
                         g.DrawRectangle( Pens.DarkBlue, rec );
-                        switch ( current_play.user_field[i,j] )
+                        switch ( current_play.user_field[ i, j ] )
                         {
                             case CellType.CloseNull:
                                 break;
@@ -57,7 +51,7 @@ namespace SeaWars
                                 g.FillRectangle( Brushes.Transparent, rec );
                                 break;
                             case CellType.OpenLife:
-                                g.FillRectangle(Brushes.Green, rec);
+                                g.FillRectangle( Brushes.Green, rec );
                                 break;
                             default:
                                 break;
@@ -66,7 +60,7 @@ namespace SeaWars
                 }
 
 
-            } 
+            }
         }
 
         private void pictureBox1_MouseDown( object sender, MouseEventArgs e ) // нажатия на поле
@@ -77,8 +71,8 @@ namespace SeaWars
                 current_play.putShip( e.X, e.Y );
             }
             else
-            { 
-                current_play.delShip( e.X, e.Y ); 
+            {
+                current_play.delShip( e.X, e.Y );
             }
 
             pictureBox1.Refresh();
@@ -86,8 +80,8 @@ namespace SeaWars
 
         private void pictureBox2_Paint( object sender, PaintEventArgs e ) // отрисовка поля врага
         {
-           
-            if ( current_play != null ) 
+
+            if ( current_play != null )
             {
                 Graphics g = e.Graphics;
 
@@ -110,7 +104,7 @@ namespace SeaWars
                             case CellType.OpenNull:
                                 break;
                             case CellType.OpenLife:
-                                
+
                                 break;
                             default:
                                 break;
@@ -137,9 +131,9 @@ namespace SeaWars
 
         private void pictureBox2_MouseDown( object sender, MouseEventArgs e )
         {
-            if( current_play != null )
+            if ( current_play != null )
             {
-                current_play.TernUser(e.X,e.Y);
+                current_play.TernUser( e.X, e.Y );
                 pictureBox2.Refresh();
             }
         }
@@ -151,6 +145,10 @@ namespace SeaWars
 
             pictureBox1.Refresh(); // методы обновления поля
             pictureBox2.Refresh();
+            pictureBox3.Refresh();
+            pictureBox4.Refresh();
+            pictureBox5.Refresh();
+            pictureBox6.Refresh();
             if ( playseabattle.Turn == 0 )
             {
                 MessageBox.Show( "Этап расстановки" );
@@ -169,15 +167,41 @@ namespace SeaWars
             }
 
         }
-
-        private void groupBox4_Enter( object sender, EventArgs e )
+        public void PaintShip( int Length, PaintEventArgs e ) //отрисовка кораблей
         {
+            if ( current_play != null )
+            {
+                Graphics g = e.Graphics;
 
+                for ( int i = 0; i < Length; i++ )
+                {
+                    for ( int j = 0; j < 1; j++ )
+                    {
+                        Rectangle rec = new Rectangle( i * current_play.cellWEnemy + i, j * current_play.cellHEnemy + j, current_play.cellWEnemy, current_play.cellHEnemy ); // отрисовка поля по x, y
+                        g.DrawRectangle( Pens.DarkBlue, rec );
+                        g.FillRectangle( Brushes.Green, rec );
+                    }
+                }
+            }
+        }
+        private void pictureBox3_Paint( object sender, PaintEventArgs e )
+        {
+            PaintShip( 1, e );
         }
 
-        private void groupBox1_Enter( object sender, EventArgs e )
+        private void pictureBox4_Paint( object sender, PaintEventArgs e )
         {
+            PaintShip( 2, e );
+        }
 
+        private void pictureBox6_Paint( object sender, PaintEventArgs e )
+        {
+            PaintShip( 3, e );
+        }
+
+        private void pictureBox5_Paint( object sender, PaintEventArgs e )
+        {
+            PaintShip( 4, e );
         }
     }
 }
