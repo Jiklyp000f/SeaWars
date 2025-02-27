@@ -51,7 +51,7 @@ namespace SeaWars
 
 
 
-        public List<Ship> UserStartToWar() // метод для начала игры(расстановки) ИГРОКА
+        public List<Ship> UserStartToWar() // метод для начала игры(расстановки) ИГРОКА(отправка контейнера в котором хранятся сущности для будущей расстановки)
         {
             List<Ship> ships = new List<Ship>();
 
@@ -69,7 +69,7 @@ namespace SeaWars
             return ships;
         }
 
-        public List<Ship> EnemyStartToWar() // метод для начала игры(расстановки) ПРОТИВНИКА
+        public List<Ship> EnemyStartToWar() // метод для начала игры(расстановки) ПРОТИВНИКА(отправка контейнера в котором хранятся сущности для будущей расстановки)
         {
             List<Ship> ships = new List<Ship>();
 
@@ -99,7 +99,7 @@ namespace SeaWars
         }
 
 
-        public void autoPutShips() // авторасстановка
+        public void autoPutShips() // авторасстановка??
         {
             enemy_field[ 0, 0 ] = CellType.CloseLife;
         }
@@ -124,11 +124,15 @@ namespace SeaWars
         public bool TernUser( int xM, int yM ) // логика хода игрока
         {
             int x = xM / cellWEnemy;
-            int y = yM / cellHEnemy; // логика отрисовки врага
+            int y = yM / cellHEnemy; // логика ДЛЯ нажатия на поле врага
 
             if ( enemy_field[ x, y ] == CellType.CloseLife )
             {
                 enemy_field[ x, y ] = CellType.OpenHit;
+            }
+            if ( enemy_field[ x, y ] == CellType.CloseNull )
+            {
+                enemy_field[ x, y ] = CellType.OpenLoss;
             }
 
 
@@ -136,7 +140,7 @@ namespace SeaWars
             return true;
         }
 
-        public bool TernEnemy( int xM, int yM ) // логика хода противника
+        public bool TernEnemy( int xM, int yM ) // логика хода противника??
         {
             int x = xM / cellW;
             int y = yM / cellH;

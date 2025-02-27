@@ -40,12 +40,8 @@ namespace SeaWars
                         g.DrawRectangle( Pens.DarkBlue, rec );
                         switch ( current_play.user_field[ i, j ] )
                         {
-                            case CellType.CloseNull:
-                                break;
                             case CellType.OpenHit:
-                                break;
-                            case CellType.CloseLife:
-
+                                g.FillRectangle( Brushes.Red, rec );
                                 break;
                             case CellType.OpenNull:
                                 g.FillRectangle( Brushes.Transparent, rec );
@@ -94,17 +90,16 @@ namespace SeaWars
                         switch ( current_play.enemy_field[ i, j ] )
                         {
                             case CellType.CloseNull:
+                                g.DrawRectangle( Pens.Black, rec );
                                 break;
                             case CellType.OpenHit:
                                 g.FillRectangle( Brushes.Red, rec );
                                 break;
+                            case CellType.OpenLoss:
+                                g.FillRectangle( Brushes.Blue, rec );
+                                break;
                             case CellType.CloseLife:
-
-                                break;
-                            case CellType.OpenNull:
-                                break;
-                            case CellType.OpenLife:
-
+                                g.DrawRectangle( Pens.Black, rec );
                                 break;
                             default:
                                 break;
@@ -184,22 +179,22 @@ namespace SeaWars
                 }
             }
         }
-        private void pictureBox3_Paint( object sender, PaintEventArgs e )
+        private void pictureBox3_Paint( object sender, PaintEventArgs e ) //однопалубные
         {
             PaintShip( 1, e );
         }
 
-        private void pictureBox4_Paint( object sender, PaintEventArgs e )
+        private void pictureBox4_Paint( object sender, PaintEventArgs e )//двупалубные
         {
             PaintShip( 2, e );
         }
 
-        private void pictureBox6_Paint( object sender, PaintEventArgs e )
+        private void pictureBox6_Paint( object sender, PaintEventArgs e )//трехпалубные
         {
             PaintShip( 3, e );
         }
 
-        private void pictureBox5_Paint( object sender, PaintEventArgs e )
+        private void pictureBox5_Paint( object sender, PaintEventArgs e )//четырёхпалубные
         {
             PaintShip( 4, e );
         }

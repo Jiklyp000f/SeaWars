@@ -122,7 +122,7 @@
             this.groupBox1.Size = new System.Drawing.Size(202, 111);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Однопалубные (1)";
+            this.groupBox1.Text = "Однопалубные (4)";
             // 
             // pictureBox3
             // 
@@ -141,7 +141,7 @@
             this.groupBox2.Size = new System.Drawing.Size(202, 111);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Двупалубные (2)";
+            this.groupBox2.Text = "Двупалубные (3)";
             // 
             // pictureBox4
             // 
@@ -160,7 +160,7 @@
             this.groupBox3.Size = new System.Drawing.Size(202, 111);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Четырёхпалубный (4)";
+            this.groupBox3.Text = "Четырёхпалубный (1)";
             // 
             // pictureBox5
             // 
@@ -179,7 +179,7 @@
             this.groupBox4.Size = new System.Drawing.Size(202, 111);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Трёхпалубные (4)";
+            this.groupBox4.Text = "Трёхпалубные (2)";
             // 
             // pictureBox6
             // 
